@@ -1,0 +1,8 @@
+.card {
+  border: 10px solid orange;
+  width: 25rem;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
