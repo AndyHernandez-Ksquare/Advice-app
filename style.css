@@ -3,10 +3,11 @@ main {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  font-family: sans-serif;
 }
 
 .card {
-  border: 10px solid orange;
+  border: 10px solid #19a7ce;
   width: 25rem;
   height: 10rem;
   display: flex;
@@ -14,4 +15,27 @@ main {
   align-items: center;
   justify-content: space-between;
   padding: 2rem;
+  border-radius: 5px;
+}
+
+.card q {
+  color: #19a7ce;
+  font-size: 1.5rem;
+}
+.button-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.twitter > i {
+  color: #19a7ce;
+  font-size: 2rem;
+}
+
+.another-quote {
+  padding: 0.6rem 2rem;
+  color: white;
+  background-color: #19a7ce;
+  border: none;
+  border-radius: 5px;
 }
