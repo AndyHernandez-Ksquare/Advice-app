@@ -1,6 +1,8 @@
 // DOM elements
 const advice = document.querySelector(".text");
 const anotherAdvice = document.querySelector(".another-quote");
+const twitterBtn = document.querySelector(".twitter");
+// Variable to store the advice sentence
 let adviceInfo;
 
 const fetchData = async () => {
@@ -17,9 +19,21 @@ const changeText = async () => {
   advice.textContent = adviceInfo.slip.advice;
 };
 
+// Function to open twitter and share current sentence
+const shareOnTwitter = () => {
+  const text = encodeURIComponent(adviceInfo.slip.advice);
+  const twitterUrl = `https://twitter.com/intent/tweet?text=${text}`;
+  window.open(twitterUrl);
+};
+
 // Call the change text function when button is clicked
 anotherAdvice.addEventListener("click", () => {
   changeText();
+});
+
+// Call the shareOnTwitter function when twitter anchor tag is clicked
+twitterBtn.addEventListener("click", () => {
+  shareOnTwitter();
 });
 
 // Load advice on load
