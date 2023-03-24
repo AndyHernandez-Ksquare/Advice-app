@@ -1,5 +1,6 @@
 // DOM elements
 const advice = document.querySelector(".text");
+const anotherAdvice = document.querySelector(".another-quote");
 let adviceInfo;
 
 const fetchData = async () => {
@@ -8,11 +9,16 @@ const fetchData = async () => {
   return data;
 };
 
+// Function to change the text of the advice
 const changeText = async () => {
   adviceInfo = await fetchData();
   advice.textContent = adviceInfo.slip.advice;
-  console.log(advice);
 };
+
+// Call the change text function when button is clicked
+anotherAdvice.addEventListener("click", () => {
+  changeText();
+});
 
 // Load advice on load
 changeText();
