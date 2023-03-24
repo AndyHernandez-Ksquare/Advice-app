@@ -1,7 +1,7 @@
 // DOM elements
 const advice = document.querySelector(".text");
 const anotherAdvice = document.querySelector(".another-quote");
-const twitterBtn = document.querySelector(".twitter");
+const twitterAnchor = document.querySelector(".twitter");
 // Variable to store the advice sentence
 let adviceInfo;
 
@@ -32,7 +32,7 @@ anotherAdvice.addEventListener("click", () => {
 });
 
 // Call the shareOnTwitter function when twitter anchor tag is clicked
-twitterBtn.addEventListener("click", () => {
+twitterAnchor.addEventListener("click", () => {
   shareOnTwitter();
 });
 
